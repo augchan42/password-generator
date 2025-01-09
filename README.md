@@ -72,12 +72,12 @@ This will generate a password using the default configuration:
 You can customize the password generation using these options:
 
 ```
-pnpm start -- -t <type> -l <length> -i <iteration> -s <separator>
+pnpm start -- <type> -l <length> -i <iteration> -s <separator>
 ```
 
 | Option | Description | Default |
 |--------|-------------|---------|
-| `-t, --type` | Password type (random, memorable, strong) | base64 |
+| `<type>` | Password type (random, memorable, strong) | base64 |
 | `-l, --length` | Password length | 12 |
 | `-i, --iteration` | Number of passwords to generate | 1 |
 | `-s, --separator` | Word separator for memorable passwords | - |

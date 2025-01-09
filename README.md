@@ -9,6 +9,8 @@
 
 <!-- markdownlint-enable MD033 MD041 -->
 
+Forked from @sebastienrousseau/password-generator
+
 # Password Generator
 
 A fast, simple, and powerful open-source utility tool for generating strong, unique, and random passwords. The Password Generator supports various types of passwords including base64-encoded, memorable, and complex strong passwords. It is designed to be a versatile tool for both personal and enterprise needs, ensuring that all users have access to high-security password options. Password Generator is free to use as a secure password generator on any computer, phone, or tablet.
@@ -34,16 +36,59 @@ A fast, simple, and powerful open-source utility tool for generating strong, uni
 
 ## Installation
 
-### From NPM or YARN
-
-To install the Password Generator Tool, use either npm or yarn as follows:
-
--   `npm i @sebastienrousseau/password-generator`
--   `yarn add @sebastienrousseau/password-generator`
-
 ### From GitHub
 
-Clone the main repository to get all source files including build scripts: `git clone https://github.com/sebastienrousseau/password-generator.git`
+Clone the forked repository to get all source files including build scripts:
+
+```shell
+gh repo clone augchan42/password-generator
+```
+
+Then, navigate into the cloned directory and install the dependencies using `pnpm`:
+
+```shell
+cd password-generator
+pnpm i
+```
+
+
+## Usage
+
+You can generate passwords using the CLI with the following command:
+
+```
+pnpm start
+```
+
+
+This will generate a password using the default configuration:
+- Type: base64
+- Length: 12 characters
+- Iterations: 1
+- Separator: "-"
+
+### Command Line Options
+
+You can customize the password generation using these options:
+
+```
+pnpm start -- -t <type> -l <length> -i <iteration> -s <separator>
+```
+
+| Option | Description | Default |
+|--------|-------------|---------|
+| `-t, --type` | Password type (random, memorable, strong) | base64 |
+| `-l, --length` | Password length | 12 |
+| `-i, --iteration` | Number of passwords to generate | 1 |
+| `-s, --separator` | Word separator for memorable passwords | - |
+
+### Examples
+
+Generate a strong password of 16 characters:
+
+```
+pnpm start -- strong -l 16
+```
 
 ## What's included
 
@@ -118,41 +163,13 @@ You'll see something like this:
 
 ## Usage
 
-To generate a password, you can call the Password Generator with the desired type and options. Below are examples of how to generate each type of password:
-
-### From the CLI
+To run the Password Generator, use the following command:
 
 ```shell
-node .
+pnpm start
 ```
 
-Displays the following help menu
-
-```shell
-Usage: password-generator [options]
-
-A fast, simple and powerful open-source utility tool for generating strong, unique and random passwords
-
-Options:
-  -v, --version              output the current version
-  -t, --type <type>          specify a password type (default: "base64, memorable or strong")
-  -l, --length <numbers>     specify a length for each iteration
-  -i, --iteration <numbers>  specify a number of iteration
-  -s, --separator <char>     specify a character for the separator
-  -h, --help                 display help for command
-```
-
-### From Node.js
-
-```shell
-var generatePassword = require('password-generator');
-```
-
-### From the Browser
-
-```shell
-<script src="<https://raw.githubusercontent.com/sebastienrousseau/password-generator/master/src/bin/password-generator.js>" type="text/javascript"></script>
-```
+This will start the application with the default configuration. You can also specify options as needed.
 
 ## Password options
 

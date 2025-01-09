@@ -9,8 +9,6 @@
 
 <!-- markdownlint-enable MD033 MD041 -->
 
-Forked from @sebastienrousseau/password-generator
-
 # Password Generator
 
 A fast, simple, and powerful open-source utility tool for generating strong, unique, and random passwords. The Password Generator supports various types of passwords including base64-encoded, memorable, and complex strong passwords. It is designed to be a versatile tool for both personal and enterprise needs, ensuring that all users have access to high-security password options. Password Generator is free to use as a secure password generator on any computer, phone, or tablet.
@@ -51,15 +49,15 @@ cd password-generator
 pnpm i
 ```
 
+Forked from @sebastienrousseau/password-generator
 
 ## Usage
 
-You can generate passwords using the CLI with the following command:
+To run the Password Generator, use the following command:
 
-```
+```shell
 pnpm start
 ```
-
 
 This will generate a password using the default configuration:
 - Type: base64
@@ -89,6 +87,7 @@ Generate a strong password of 16 characters:
 ```
 pnpm start -- strong -l 16
 ```
+
 
 ## What's included
 
@@ -160,109 +159,6 @@ You'll see something like this:
 
 9 directories, 50 files
 ```
-
-## Usage
-
-To run the Password Generator, use the following command:
-
-```shell
-pnpm start
-```
-
-This will start the application with the default configuration. You can also specify options as needed.
-
-## Password options
-
-### Base64 password
-
-#### Generating a random base64 password using yarn
-
-```shell
-yarn start -t base64 -l 8 -i 4 -s -
-```
-
-#### Generating a random base64 password using node
-
-```shell
-node . -t base64 -l 8 -i 4 -s -
-```
-
-#### Generating a random base64 password calling the base64Password function
-
-```shell
-node dist/src/lib/base64-password.js -t base64 -l 8 -i 4 -s -
-```
-
-### Strong password
-
-#### Generating a random strong password using yarn
-
-```shell
-yarn start -t strong -l 8 -i 4 -s -
-```
-
-#### Generating a random strong password using node
-
-```shell
-node . -t strong -l 8 -i 4 -s -
-```
-
-#### Generating a random strong password calling the strongPassword function
-
-```shell
-node dist/src/lib/strong-password.js -t base64 -l 8 -i 4 -s -
-```
-
-### Memorable password
-
-#### Generating a random memorable password using yarn
-
-```shell
-yarn start -t memorable -i 4 -s -
-```
-
-#### Generating a random memorable password using node
-
-```shell
-node . -t memorable -i 4 -s -
-```
-
-#### Generating a random memorable password calling the memorablePassword function
-
-```shell
-node dist/src/lib/memorable-password.js -t base64  -i 4 -s -
-```
-
-## Semantic Versioning Policy
-
-For transparency into our release cycle and in striving to maintain backward compatibility, `password-generator` follows [semantic versioning](http://semver.org/) and [ESLint's Semantic Versioning Policy](https://github.com/eslint/eslint#semantic-versioning-policy).
-
-## Changelog
-
--   [GitHub Releases](https://github.com/sebastienrousseau/password-generator/releases)
-
-## Contributing
-
-Please read carefully through our [Contributing Guidelines](https://github.com/sebastienrousseau/password-generator/blob/master/.github/CONTRIBUTING.md) for further details on the process for submitting pull requests to us.
-
-Development Tools
-
--   `yarn build` runs build.
--   `yarn clean` removes the coverage result of npm test command.
--   `yarn coverage` shows the coverage result of npm test command.
--   `yarn lint` run ESLint.
--   `yarn lint-fix` instructs ESLint to try to fix as many issues as possible..
--   `yarn test` runs tests and measures coverage.
-
-## Rules
-
-We are committed to preserving and fostering a diverse, welcoming community. Please read our [Code of Conduct](https://github.com/sebastienrousseau/password-generator/blob/master/.github/CODE-OF-CONDUCT.md).
-
-## Our Values
-
--   We believe perfection must consider everything.
--   We take our passion beyond code into our daily practices.
--   We are just obsessed about creating and delivering exceptional solutions.
 
 ## License
 
